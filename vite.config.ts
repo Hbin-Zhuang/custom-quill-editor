@@ -11,15 +11,22 @@ export default defineConfig({
     vue(),
     vueJsx(),
     inject({
-      'window.Quill': 'quill'
-    })
+      'window.Quill': 'quill',
+    }),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
-    }
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
   },
   server: {
-    host: true
-  }
+    host: true,
+  },
+  // 自定义生产环境构建选项
+  build: {
+    rollupOptions: {
+      // 确保外部化处理那些你不想打包进库的依赖
+      external: ['quill', 'quill-image-resize-module']
+    }
+  },
 })
