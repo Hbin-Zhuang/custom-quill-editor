@@ -32,6 +32,7 @@ export default defineConfig({
         commonjs(),
         externalGlobals({
           quill: 'Quill',
+          'quill-image-resize-module': 'QuillImageResize'
         }),
       ],
       output: {
