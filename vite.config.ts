@@ -12,6 +12,7 @@ export default defineConfig({
     vueJsx(),
     inject({
       'window.Quill': 'quill',
+      'quill': 'quill/dist/quill.js',
     }),
   ],
   resolve: {
