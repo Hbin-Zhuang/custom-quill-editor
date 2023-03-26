@@ -30,7 +30,8 @@ export default defineConfig({
       ],
       output: {
         globals: {
-          quill: 'Quill'
+          quill: 'Quill',
+          Quill: 'quill',
         }
       },
       // 确保外部化处理那些你不想打包进库的依赖
