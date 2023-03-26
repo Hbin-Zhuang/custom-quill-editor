@@ -51,7 +51,7 @@
 
     setTimeout(() => {
       callback('https://img1.baidu.com/it/u=780668329,2450662419&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500')
-    }, 1000)
+    }, 800)
   }
   // 富文本内容 change 事件
   function handleChange(content: string) {
