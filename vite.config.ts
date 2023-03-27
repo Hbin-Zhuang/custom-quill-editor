@@ -30,7 +30,7 @@ export default defineConfig({
       //   },
       // },
       // 排除打包构建的库
-      external: ['quill-image-resize-module']
+      // external: ['quill-image-resize-module']
     },
   },
 })

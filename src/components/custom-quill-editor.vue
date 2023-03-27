@@ -9,12 +9,13 @@
   import { ref, computed, watch, nextTick, onMounted, getCurrentInstance } from 'vue'
   import { useVModel } from '@vueuse/core'
   import Quill from 'quill'
-  import ImageResize from 'quill-image-resize-module'
   import 'quill/dist/quill.core.css' // import styles
   import 'quill/dist/quill.snow.css' // for snow theme
   import 'quill/dist/quill.bubble.css' // for bubble theme
 
-  Quill.register('modules/imageResize', ImageResize)
+  // import ImageResize from 'quill-image-resize-module'
+  // Quill.register('modules/imageResize', ImageResize)
+
   const Delta = Quill.import('delta')
   // 占位图片前缀名
   const IMG_PREFIX = 'placeholder-img-'
@@ -259,9 +260,9 @@
         clipboard: true,
         toolbar: toolbarOptions.value,
         // 图片裁剪
-        imageResize: {
-          modules: ['Resize', 'DisplaySize', 'Toolbar'],
-        },
+        // imageResize: {
+        //   modules: ['Resize', 'DisplaySize', 'Toolbar'],
+        // },
       },
     })
     _content.value = syncedContent.value
