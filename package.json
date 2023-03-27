@@ -22,7 +22,6 @@
   },
   "devDependencies": {
     "@rollup/plugin-inject": "^5.0.3",
-    "@rollup/plugin-node-resolve": "^15.0.1",
     "@rushstack/eslint-patch": "^1.2.0",
     "@types/jsdom": "^21.1.0",
     "@types/node": "^18.15.8",
@@ -37,8 +36,6 @@
     "jsdom": "^21.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.4",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-external-globals": "^0.7.3",
     "typescript": "~4.8.4",
     "vite": "^4.1.4",
     "vitest": "^0.29.1",
