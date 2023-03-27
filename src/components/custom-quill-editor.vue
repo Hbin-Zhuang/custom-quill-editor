@@ -20,7 +20,7 @@
   // 占位图片前缀名
   const IMG_PREFIX = 'placeholder-img-'
 
-  const { ctx } = getCurrentInstance() as any
+  const { proxy } = getCurrentInstance() as any
   const props = defineProps({
     content: {
       type: String,
@@ -281,7 +281,7 @@
     // 3. 点击富文本image toolbar 选择图片
     const toolbar = editor.getModule('toolbar')
     toolbar.addHandler('image', () => {
-      ;(ctx.$refs.input as any).click()
+      ;(proxy.$refs.input as any).click()
     })
   }
   // 1. 编辑器插入占位图, 转粘贴的默认base64格式图片格式为Blob对象, 再更新编辑器内容, 将新的delta对象返回
