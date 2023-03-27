@@ -6,6 +6,8 @@ const inject = require('@rollup/plugin-inject')
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // 匹配 nginx 子路径
+  base: './',
   plugins: [
     vue(),
     vueJsx(),
