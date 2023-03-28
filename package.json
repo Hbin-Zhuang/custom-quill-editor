@@ -1,7 +1,7 @@
 {
   "name": "custom-quill-editor",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "vite",
     "build": "vite build",
