@@ -7,7 +7,9 @@ const inject = require('@rollup/plugin-inject')
 // https://vitejs.dev/config/
 export default defineConfig({
   // 匹配 nginx 子路径
-  base: './',
+  // dev环境: `/` 或者 `./`
+  // build环境: 根目录: `./`, 子路径: `/custom-quill-editor/`
+  base: process.env.NODE_ENV === 'production' ? '/custom-quill-editor/' : './',
   plugins: [
     vue(),
     vueJsx(),
